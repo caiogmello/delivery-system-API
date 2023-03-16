@@ -2,6 +2,7 @@ package com.caiogmello.deliveryAPI.api.controller;
 
 import com.caiogmello.deliveryAPI.Customer;
 import com.caiogmello.deliveryAPI.domain.repository.CustomerRepository;
+import com.caiogmello.deliveryAPI.domain.service.CustomerCRUDService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.validation.Valid;
@@ -23,6 +24,7 @@ public class CustomerController {
 
     @Autowired
     private CustomerRepository customerRepository;
+    private CustomerCRUDService customerCRUDService;
 
     @GetMapping
     public List<Customer> list(){
@@ -41,7 +43,7 @@ public class CustomerController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Customer add(@Valid @RequestBody Customer customer) {
-        return customerRepository.save(customer);
+        return customerCRUDService.save(customer);
     }
 
     @PutMapping("/{customerId}")
@@ -52,7 +54,7 @@ public class CustomerController {
         }
 
         customer.setId(customerId);
-        customer = customerRepository.save(customer);
+        customer = customerCRUDService.save(customer);
 
         return ResponseEntity.ok(customer);
     }
@@ -63,7 +65,7 @@ public class CustomerController {
             return ResponseEntity.notFound().build();
         }
 
-        customerRepository.deleteById(customerId);
+        customerCRUDService.delete(customerId);
 
         return ResponseEntity.noContent().build();
     }
