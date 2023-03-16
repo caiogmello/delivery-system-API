@@ -1,19 +1,15 @@
 package com.caiogmello.deliveryAPI.api.controller;
 
-import com.caiogmello.deliveryAPI.Customer;
+import com.caiogmello.deliveryAPI.domain.model.Customer;
 import com.caiogmello.deliveryAPI.domain.repository.CustomerRepository;
 import com.caiogmello.deliveryAPI.domain.service.CustomerCRUDService;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 

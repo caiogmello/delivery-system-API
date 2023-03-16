@@ -1,6 +1,6 @@
 package com.caiogmello.deliveryAPI.domain.service;
 
-import com.caiogmello.deliveryAPI.Customer;
+import com.caiogmello.deliveryAPI.domain.model.Customer;
 import com.caiogmello.deliveryAPI.domain.exception.EnterpriseException;
 import com.caiogmello.deliveryAPI.domain.repository.CustomerRepository;
 import jakarta.transaction.Transactional;
@@ -12,6 +12,11 @@ import org.springframework.stereotype.Service;
 public class CustomerCRUDService {
 
     private CustomerRepository customerRepository;
+
+    public Customer find(Long customerId) {
+        return customerRepository.findById(customerId)
+                .orElseThrow(() -> new EnterpriseException("Customer not found"));
+    }
 
     @Transactional
     public Customer save(Customer customer) {

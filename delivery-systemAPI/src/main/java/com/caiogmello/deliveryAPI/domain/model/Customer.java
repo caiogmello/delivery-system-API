@@ -1,4 +1,4 @@
-package com.caiogmello.deliveryAPI;
+package com.caiogmello.deliveryAPI.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

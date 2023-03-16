@@ -1,6 +1,6 @@
 package com.caiogmello.deliveryAPI.domain.repository;
 
-import com.caiogmello.deliveryAPI.Customer;
+import com.caiogmello.deliveryAPI.domain.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
