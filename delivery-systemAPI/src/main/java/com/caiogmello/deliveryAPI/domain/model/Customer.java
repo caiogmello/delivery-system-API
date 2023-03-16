@@ -1,7 +1,10 @@
 package com.caiogmello.deliveryAPI.domain.model;
 
+import com.caiogmello.deliveryAPI.domain.ValidationGroups;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import jakarta.validation.groups.Default;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +14,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Customer {
+    @NotNull(groups = ValidationGroups.CustomerId.class)
     @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
