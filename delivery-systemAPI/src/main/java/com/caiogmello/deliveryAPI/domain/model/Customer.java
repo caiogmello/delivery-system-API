@@ -14,7 +14,6 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Customer {
-    @NotNull(groups = ValidationGroups.CustomerId.class)
     @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
