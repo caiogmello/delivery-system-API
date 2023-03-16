@@ -4,6 +4,7 @@ import com.caiogmello.deliveryAPI.Customer;
 import com.caiogmello.deliveryAPI.domain.repository.CustomerRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,13 +40,13 @@ public class CustomerController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Customer add(@RequestBody Customer customer) {
+    public Customer add(@Valid @RequestBody Customer customer) {
         return customerRepository.save(customer);
     }
 
     @PutMapping("/{customerId}")
     public ResponseEntity<Customer> refresh(@PathVariable Long customerId,
-                                           @RequestBody Customer customer) {
+                                           @Valid @RequestBody Customer customer) {
         if (!customerRepository.existsById(customerId)) {
             return ResponseEntity.notFound().build();
         }
