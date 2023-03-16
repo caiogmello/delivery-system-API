@@ -14,6 +14,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Getter
 @Setter
@@ -42,9 +43,9 @@ public class Delivery {
     private DeliveryStatus status;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private LocalDateTime orderDate;
+    private OffsetDateTime orderDate;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private LocalDateTime checkoutDate;
+    private OffsetDateTime checkoutDate;
 
 }

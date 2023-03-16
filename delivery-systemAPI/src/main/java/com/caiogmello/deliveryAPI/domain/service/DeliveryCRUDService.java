@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @AllArgsConstructor
 @Service
@@ -25,7 +26,7 @@ public class DeliveryCRUDService {
 
         delivery.setCustomer(customer);
         delivery.setStatus(DeliveryStatus.PENDING);
-        delivery.setOrderDate(LocalDateTime.now());
+        delivery.setOrderDate(OffsetDateTime.now());
 
         return deliveryRepository.save(delivery);
     }

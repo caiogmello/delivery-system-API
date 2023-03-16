@@ -7,12 +7,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Getter
 @Setter
 public class Problem {
     private Integer status;
-    private LocalDateTime dateTime;
+    private OffsetDateTime dateTime;
     private String title;
 }
