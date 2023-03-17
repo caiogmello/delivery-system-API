@@ -15,6 +15,8 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -26,7 +28,6 @@ public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ConvertGroup(from = Default.class, to = ValidationGroups.CustomerId.class)
     @ManyToOne
     private Customer customer;
     @Embedded
@@ -34,9 +35,20 @@ public class Delivery {
     private BigDecimal fee;
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
-
     private OffsetDateTime orderDate;
-
     private OffsetDateTime checkoutDate;
+    @OneToMany(mappedBy = "delivery", cascade = CascadeType.ALL)
+    private List<Occurrence> occurrences = new ArrayList<>();
+
+    public Occurrence addOccurrence(String description) {
+        Occurrence occurrence = new Occurrence();
+        occurrence.setDescription(description);
+        occurrence.setRegisterDate(OffsetDateTime.now());
+        occurrence.setDelivery(this);
+
+        this.getOccurrences().add(occurrence);
+
+        return occurrence;
+    }
 
 }

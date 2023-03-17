@@ -1,6 +1,7 @@
 package com.caiogmello.deliveryAPI.api.exceptionhandler;
 
 import com.caiogmello.deliveryAPI.domain.exception.EnterpriseException;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,19 @@ import java.time.OffsetDateTime;
 @AllArgsConstructor
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<Object> handleEntityNotFound(EntityNotFoundException ex, WebRequest request) {
+        HttpStatus status = HttpStatus.NOT_FOUND;
+
+        Problem problem = new Problem();
+        problem.setStatus(status.value());
+        problem.setDateTime(OffsetDateTime.now());
+        problem.setTitle(ex.getMessage());
+
+        return handleExceptionInternal(ex, problem, new HttpHeaders(), status, request);
+    }
+
 
     @ExceptionHandler(EnterpriseException.class)
     public ResponseEntity<Object> handleEnterprise(EnterpriseException ex, WebRequest request) {
