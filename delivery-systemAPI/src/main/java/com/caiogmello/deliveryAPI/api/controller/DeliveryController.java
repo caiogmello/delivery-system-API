@@ -7,6 +7,7 @@ import com.caiogmello.deliveryAPI.api.model.input.DeliveryInput;
 import com.caiogmello.deliveryAPI.domain.model.Customer;
 import com.caiogmello.deliveryAPI.domain.model.Delivery;
 import com.caiogmello.deliveryAPI.domain.repository.DeliveryRepository;
+import com.caiogmello.deliveryAPI.domain.service.CheckoutService;
 import com.caiogmello.deliveryAPI.domain.service.DeliveryCRUDService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ import java.util.List;
 @RequestMapping("/deliveries")
 public class DeliveryController {
 
+    private CheckoutService checkoutService;
     private DeliveryRepository deliveryRepository;
     private DeliveryCRUDService deliveryCRUDService;
     private DeliveryAssembler deliveryAssembler;
@@ -31,6 +33,12 @@ public class DeliveryController {
     public DeliveryResponseDTO request(@Valid @RequestBody DeliveryInput deliveryInput) {
         Delivery delivery = deliveryAssembler.toEntity(deliveryInput);
         return deliveryAssembler.toModel(deliveryCRUDService.request(delivery));
+    }
+
+    @PutMapping("/{deliveryId}/checkout")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void checkout(@PathVariable Long deliveryId) {
+        checkoutService.checkout(deliveryId);
     }
 
     @GetMapping

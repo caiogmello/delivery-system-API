@@ -1,6 +1,7 @@
 package com.caiogmello.deliveryAPI.domain.model;
 
 import com.caiogmello.deliveryAPI.domain.ValidationGroups;
+import com.caiogmello.deliveryAPI.domain.exception.EnterpriseException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -50,5 +51,19 @@ public class Delivery {
 
         return occurrence;
     }
+
+    public void finalizeDelivery() {
+        if (!check()){
+            throw new EnterpriseException("Delivery cannot be performed");
+        }
+        setStatus(DeliveryStatus.FINISHED);
+
+        setCheckoutDate(OffsetDateTime.now());
+    }
+
+    public boolean check() {
+        return DeliveryStatus.PENDING.equals(getStatus());
+    }
+
 
 }
