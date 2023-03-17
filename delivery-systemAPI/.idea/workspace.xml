@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="74903922-219b-4083-a77f-cbdae6504193" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/DeliverySystemApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/assembler/DeliveryAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/assembler/OccurrenceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/controller/DeliveryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/controller/OccurreceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/exceptionhandler/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/exceptionhandler/Problem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/CustomerSummaryModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/DeliveryResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/OccurrenceResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/RecipientResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/input/CustomerIdInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/input/DeliveryInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/input/OccurrenceInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/api/model/input/RecipientInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/commom/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/ValidationGroups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/exception/EnterpriseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/exception/EntityNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/model/Delivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/model/DeliveryStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/model/Occurrence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/model/Recipient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/repository/DeliveryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/service/CheckoutService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/service/CustomerCRUDService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/service/DeliveryCRUDService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/service/GetDeliveryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiogmello/deliveryAPI/domain/service/RecordOccurrenceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V001__create-costumer-table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V002__create-delivery-table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V003__create-occurrence-table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/caiogmello/deliveryAPI/DeliverySystemApiApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2N1MFPx4ub3aeSwaAHuE5CtsCdh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/caiogmello/Projetos/delivery-system-API",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "spring.configuration.checksum": "893e5b4f9c6ad03679c28cc34d336ae6",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.caiogmello.deliveryAPI.api.model.input" />
+      <recent name="com.caiogmello.deliveryAPI.api.model" />
+      <recent name="com.caiogmello.deliveryAPI.domain.model" />
+      <recent name="com.caiogmello.deliveryAPI.domain.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DeliverySystemApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="delivery-systemAPI" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.caiogmello.deliveryAPI.DeliverySystemApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74903922-219b-4083-a77f-cbdae6504193" name="Changes" comment="" />
+      <created>1678827031882</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678827031882</updated>
+      <workItem from="1678827033267" duration="1232000" />
+      <workItem from="1678901789625" duration="666000" />
+      <workItem from="1678902481847" duration="15073000" />
+      <workItem from="1678970830668" duration="9039000" />
+      <workItem from="1679006256302" duration="4891000" />
+      <workItem from="1679056485253" duration="13947000" />
+      <workItem from="1679085404477" duration="110000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.model" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="jakarta.validation.ConstraintDeclarationException" package="jakarta.validation" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
